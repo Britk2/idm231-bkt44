@@ -16,6 +16,9 @@ _Needs to decide which one to use out of total_
     - bard
     - machist
     - dancer
+    - black mage
+    - red mage
+    - summoner
 - Healers (3)
     - whitemage
     - scholar
@@ -28,7 +31,7 @@ _Needs to decide which one to use out of total_
 - Special
     - Bluemage
 
-
+Sounds are going to be based off of the sfx or somthing on the 12th umbral
 
 _Inputs, font, graphics, try to recreate or find screenshots to base design from_
 
