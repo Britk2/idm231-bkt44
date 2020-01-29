@@ -1,0 +1,130 @@
+:root{
+    --b-color: #153958; /*background color*/
+    --t-color: #B3B3B3; /*text color*/
+    --sp1-color: #DBB75D; /*special color*/
+    --sp2-color: #FBB03B;
+    --g1-color: #4D4D4D; /*gradient colors*/
+    --g2-color: #1A1A1A; 
+}
+
+html{
+    font-size:100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body{
+    background-color: var(--b-color);
+    background-image: url("pic/background_1.svg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    
+    font-size: 100%;
+    color:var(--t-color);
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.title{
+    position: absolute;
+    top:1rem;
+    left:50%;
+}
+
+
+.welcome{
+    z-index: 10;
+    width:50%;
+    background-image: linear-gradient(var(--g1-color),var(--g2-color));
+    border: solid 2px var(--sp1-color);
+    border-radius: .5rem;
+    padding: 2rem;
+    margin: 1rem;
+
+    position: relative;
+    left:25%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+.welcome header{
+    text-align: center;
+    font-size: 300%;
+    color: var(--sp2-color);
+}
+
+.st_op{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1{
+    text-align: center;
+    font-size: 150%;
+}
+
+.role{
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.calender_w{
+    padding: .25rem 1rem;
+    border-radius: 1rem;
+    background-color: var(--g1-color);
+}
+
+button:hover{
+    cursor:grab;
+    background-color: var(--g2-color);
+}
+
+.ok, .help{
+    background-image: linear-gradient(var(--g1-color),var(--g2-color));
+    border-radius: 1rem;
+    border-color: var(--sp1-color);
+    color: var(--sp2-color);
+    padding: 1rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+.help{
+    position: absolute;
+    top:1rem;
+    right:1rem;
+}
+
+.ok{
+    width: 5rem;
+    margin-top: 2rem;
+    align-self: center;
+}
+
+
+
