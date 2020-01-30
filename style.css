@@ -1,4 +1,5 @@
 @import "normal.css";
+
 :root{
     --b-color: #153958; /*background color*/
     --t-color: #B3B3B3; /*text color*/
@@ -43,10 +44,19 @@ ul{
     
 }
 
-.title{
+.top{
+    padding:0;
     position: absolute;
     top:1rem;
-    left:50%;
+    align-self: center;
+}
+
+.top header{
+    text-align: center;
+}
+
+.top #calender{
+    padding: 1rem 0;
 }
 
 
@@ -101,10 +111,9 @@ h1{
 
 button:hover{
     cursor:grab;
-    background-color: var(--g2-color);
 }
 
-.ok, .help{
+.ok, .help, .sound{
     background-image: linear-gradient(var(--g1-color),var(--g2-color));
     border-radius: 1rem;
     border-color: var(--sp1-color);
@@ -121,6 +130,12 @@ button:hover{
     right:1rem;
 }
 
+.sound{
+    position: absolute;
+    top:1rem;
+    left:1rem;
+}
+
 .ok{
     width: 5rem;
     margin-top: 2rem;
@@ -128,10 +143,55 @@ button:hover{
 }
 
 
+.job button{
+    background-color: transparent;
+    border:0;
+}
 
-.home{
-    display: flex;
-    flex-direction: row;
+#info img{
+    max-width: 6rem;
+}
+
+/*grid for the jobs listing*/
+
+
+.pld_b{grid-area:pld;}
+.war_b{grid-area:war;}
+.drk_b{grid-area:drk;}
+.drg_b{grid-area:drg;}
+.nin_b{grid-area:nin;}
+.sam_b{grid-area:sam;}
+.brd_b{grid-area:brd;}
+.smn_b{grid-area:smn;}
+.rdm_b{grid-area:rdm;}
+.whm_b{grid-area:whm;}
+.sch_b{grid-area:sch;}
+.ast_b{grid-area:ast;}
+#info{
+    grid-area:ino;
+    text-align: center;
+}
+#des{
+    grid-area:des;
+    text-align: center;
+}
+
+.job{
+    display: grid;
+    width: 90%;
+    margin:1rem;
+    grid-template-columns: repeat(5, 6rem);
+    grid-template-rows: repeat(5,6rem);
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+
+    grid-template-areas: 
+    ". war pld drk ."
+    "drg . ino . brd"
+    "sam . ino . rdm"
+    "nin des des des smn"
+    ". sch whm ast ."
+    ;
+
+    gap:4rem;
 }

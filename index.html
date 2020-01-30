@@ -10,7 +10,16 @@
 </head>
 <body>
     <div class="page">
-        <header class="title">FFXIV ZODIAC</header>
+        <div class="top">
+            <header class="title">FFXIV ZODIAC</header>
+        
+            <div id="calender" hidden>
+                <label id="input_label">Enter Your Birthday:</label>
+                <input type="date" year="Name" id="bday_input" placeholder="MM/DD/YYYY" required input maxlength="10">
+                <input type="submit" value="Submit" id="submit">
+            </div>
+        </div>
+
         <div id="welcome">
             <div class="welcome">
                 <header>Welcome</header>
@@ -35,35 +44,35 @@
             </div>
         </div>
         <button class="help" onclick="helpOn();">?</button>
+        <button class="sound" onclick="soundToggle();">||</button>
         
-        
-        <div class="home">
-            <div class="explore">
-                <div id="ex_job" hidden>
-                    <ul>
-                        <li><button><img src="pic/brd.png" alt="bard"></button></li>
-                        <li><button><img src="pic/drg.png" alt="dragoon"></button></li>
-                        <li><button><img src="pic/drk.png" alt="dark knight"></button></li>
-                        <li><button><img src="pic/nin.png" alt="ninja"></button></li>
-                        <li><button><img src="pic/pld.png" alt="paladin"></button></li>
-                        <li><button><img src="pic/rdm.png" alt="red mage"></button></li>
-                        <li><button><img src="pic/sam.png" alt="samurai"></button></li>
-                        <li><button><img src="pic/sch.png" alt="scholar"></button></li>
-                        <li><button><img src="pic/smn.png" alt="summoner"></button></li>
-                        <li><button><img src="pic/war.png" alt="warrior"></button></li>
-                        <li><button><img src="pic/whm.png" alt="white mage"></button></li>
-                        <li><button><img src="pic/ast.png" alt="astrologian"></button></li>
-                    </ul>
-        
+        <div id="ex_box" hidden>
+                <div class="job">
+                    <button class="pld_b"><img src="pic/pld.png" alt="pld"></button>
+                    <button class="war_b"><img src="pic/war.png" alt="war"></button>
+                    <button class="drk_b"><img src="pic/drk.png" alt="drk"></button>
+                    <button class="drg_b"><img src="pic/drg.png" alt="drg"></button>
+                    <button class="nin_b"><img src="pic/nin.png" alt="nin"></button>
+                    <button class="sam_b"><img src="pic/sam.png" alt="sam"></button>
+                    <button class="brd_b"><img src="pic/brd.png" alt="brd"></button>
+                    <button class="smn_b"><img src="pic/smn.png" alt="smn"></button>
+                    <button class="rdm_b" onclick="infoOn();"><img src="pic/rdm.png" alt="rdm"></button>
+                    <button class="whm_b"><img src="pic/whm.png" alt="whm"></button>
+                    <button class="sch_b"><img src="pic/sch.png" alt="sch"></button>
+                    <button class="ast_b"><img src="pic/ast.png" alt="ast"></button>
+
+                    <div id="info" hidden>
+                        <img src="pic/taline_daybreak.svg" alt="rdm">
+
+                        <h3>Red Mage</h3>
+                        <h5>Zodiac ###-###</h5>
+                    </div>
+
+                    <div id="des" hidden>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus repellendus nostrum perspiciatis voluptate consequuntur repudiandae, ex perferendis tenetur! Ipsum impedit unde mollitia deserunt dolore harum odio hic nihil reprehenderit ullam!</p>
+                    </div>
                 </div>
-            </div>
-            <div id="calender" hidden>
-                <label id="input_label">Enter Your Birthday:</label>
-                <input type="date" year="Name" id="bday_input" placeholder="MM/DD/YYYY" required input maxlength="10">
-                <input type="submit" value="Submit" id="submit">
-            </div>
         </div>
-        
     </div>
     <script src="zodi.js"></script>
 </body>
