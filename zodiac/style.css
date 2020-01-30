@@ -118,28 +118,26 @@ button:hover{
     border-radius: 1rem;
     border-color: var(--sp1-color);
     color: var(--sp2-color);
-    padding: 1rem 1rem;
+    padding: 1rem;
     text-align: center;
     text-decoration: none;
     font-size: 1rem;
   }
 
-.help{
-    position: absolute;
-    top:1rem;
-    right:1rem;
-}
+.help, .sound{position: absolute; top:1rem;}
+.help{right:1rem;}
+.sound{left:1rem;}
 
-.sound{
-    position: absolute;
-    top:1rem;
-    left:1rem;
-}
-
+/*clean this .ok button up*/
 .ok{
-    width: 5rem;
-    margin-top: 2rem;
+    width: 10rem;
+    height: 1rem;
     align-self: center;
+    border-color: transparent;
+    border-radius: .5rem;
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: .75;
 }
 
 
