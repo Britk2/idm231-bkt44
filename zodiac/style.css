@@ -168,7 +168,18 @@ button:hover{
 #info{
     grid-area:ino;
     text-align: center;
+    position: relative;
+    top:5rem;
 }
+
+#hover{
+    grid-area: hov;
+}
+
+#hover img{
+    width: 8rem;
+}
+
 #des{
     grid-area:des;
     text-align: center;
@@ -186,7 +197,7 @@ button:hover{
     grid-template-areas: 
     ". war pld drk ."
     "drg . ino . brd"
-    "sam . ino . rdm"
+    "sam . hov . rdm"
     "nin des des des smn"
     ". sch whm ast ."
     ;

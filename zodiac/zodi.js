@@ -18,3 +18,12 @@ function infoOn() {
     document.getElementById('des').removeAttribute('hidden');
     console.log('Info Revealed');
 }
+
+function hover() {
+    document.getElementById('hover').removeAttribute('hidden');
+}
+
+function blank() {
+    document.getElementById('hover').hidden = true;
+ }
+
