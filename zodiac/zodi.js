@@ -8,7 +8,7 @@ function helpOn() {
     document.getElementById('welcome').removeAttribute('hidden');
     document.getElementById('ex_box').hidden = true;
     document.getElementById('calender').hidden = true;
-    document.getElementById('des').hidden = true;
+    document.getElementById('des').hidden=true;
     document.getElementById('info').hidden=true;
     console.log('Help screen opened');
 }
@@ -20,7 +20,10 @@ function infoOn() {
 }
 
 function hover() {
-    document.getElementById('hover').removeAttribute('hidden');
+    if (document.getElementById('des').hidden === true && document.getElementById('info').hidden === true)
+    {
+        document.getElementById('hover').removeAttribute('hidden');
+    }
 }
 
 function blank() {
