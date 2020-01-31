@@ -176,8 +176,8 @@ button:hover{
 
 .job{
     display: grid;
-    width: 90%;
-    margin:1rem;
+    position: relative;
+    top:3rem;
     grid-template-columns: repeat(5, 6rem);
     grid-template-rows: repeat(5,6rem);
     justify-content: center;
@@ -190,6 +190,5 @@ button:hover{
     "nin des des des smn"
     ". sch whm ast ."
     ;
-
-    gap:4rem;
+    gap:3rem;
 }
