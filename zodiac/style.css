@@ -25,7 +25,6 @@ body{
     background-image: url("pic/background_1.svg");
     background-repeat:no-repeat;
     background-size: cover;
-    
     font-size: 100%;
     color:var(--t-color);
 }
@@ -41,7 +40,6 @@ ul{
     align-items: center;
     height: 100vh;
     width: 100vw;
-    
 }
 
 .top{
@@ -50,15 +48,8 @@ ul{
     top:1rem;
     align-self: center;
 }
-
-.top header{
-    text-align: center;
-}
-
-.top #calender{
-    padding: 1rem 0;
-}
-
+.top header{text-align: center;}
+.top #calender{padding: 1rem 0;}
 
 .welcome{
     z-index: 10;
@@ -71,7 +62,6 @@ ul{
 
     position: relative;
     left:25%;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -109,9 +99,7 @@ h1{
     background-color: var(--g1-color);
 }
 
-button:hover{
-    cursor:grab;
-}
+button:hover{cursor:grab;}
 
 .ok, .help, .sound{
     background-image: linear-gradient(var(--g1-color),var(--g2-color));
@@ -137,9 +125,8 @@ button:hover{
     border-radius: .5rem;
     padding-bottom: 2rem;
     margin-top: 1rem;
-    font-size: .75;
+    font-size: .75rem;
 }
-
 
 .job button{
     background-color: transparent;
@@ -151,7 +138,6 @@ button:hover{
 }
 
 /*grid for the jobs listing*/
-
 
 .pld_b{grid-area:pld;}
 .war_b{grid-area:war;}
@@ -171,19 +157,9 @@ button:hover{
     position: relative;
     top:5rem;
 }
-
-#hover{
-    grid-area: hov;
-}
-
-#hover img{
-    width: 8rem;
-}
-
-#des{
-    grid-area:des;
-    text-align: center;
-}
+#hover{grid-area: hov;}
+#hover img{width: 8rem;}
+#des{grid-area:des; text-align: center;}
 
 .job{
     display: grid;

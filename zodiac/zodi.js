@@ -16,6 +16,7 @@ function helpOn() {
 function infoOn() {
     document.getElementById('info').removeAttribute('hidden');
     document.getElementById('des').removeAttribute('hidden');
+    document.getElementById('hover').hidden = true;
     console.log('Info Revealed');
 }
 
