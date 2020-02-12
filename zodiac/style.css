@@ -172,6 +172,8 @@ button:hover{cursor:grab;}
     "des des des";
     gap: 3rem;
 }
+h6{margin-top: 0;}
+h5{margin-bottom: 0; padding-bottom: .5rem;}
 
 #mid{grid-area: mid;}
 
@@ -210,4 +212,10 @@ button:hover{cursor:grab;}
 #job{
     position: relative;
     bottom: 12.5rem;
+}
+
+@media screen and (min-width: 115rem){
+#c_b{gap:5rem;}
+.mid{top:55.5%;
+    left:26%;}
 }
