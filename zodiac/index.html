@@ -40,40 +40,44 @@
                         </div>
                     </div>
                 </div>
-                <button class="ok" onclick="wellOff();">OK</button>
+                <button class="help" id="k">OK</button>
             </div>
         </div>
-        <button class="help" onclick="helpOn();">?</button>
-        <button class="sound" onclick="soundToggle();">||</button>
+        <button class="help" id="q">?</button>
+        <button class="sound"><img src="" alt="sound"></button>
         
         <div id="ex_box" hidden>
-                <div class="job">
-                    <button class="pld_b"><img src="pic/pld.png" alt="pld"></button>
-                    <button class="war_b"><img src="pic/war.png" alt="war"></button>
-                    <button class="drk_b"><img src="pic/drk.png" alt="drk"></button>
-                    <button class="drg_b"><img src="pic/drg.png" alt="drg"></button>
-                    <button class="nin_b"><img src="pic/nin.png" alt="nin"></button>
-                    <button class="sam_b"><img src="pic/sam.png" alt="sam"></button>
-                    <button class="brd_b"><img src="pic/brd.png" alt="brd"></button>
-                    <button class="smn_b"><img src="pic/smn.png" alt="smn"></button>
-                    <button class="rdm_b" onclick="infoOn();" onmouseover="hover();" onmouseout="blank();"><img src="pic/rdm.png" alt="rdm"></button>
-                    <button class="whm_b"><img src="pic/whm.png" alt="whm"></button>
-                    <button class="sch_b"><img src="pic/sch.png" alt="sch"></button>
-                    <button class="ast_b"><img src="pic/ast.png" alt="ast"></button>
+            <div id="job">
+                <div id="c_b">
+                    <button class="b" id="pld_b"><img src="pic/pld.png" alt="pld"></button>
+                    <button class="b" id="war_b"><img src="pic/war.png" alt="war"></button>
+                    <button class="b" id="drk_b"><img src="pic/drk.png" alt="drk"></button>
+                    <button class="b" id="drg_b"><img src="pic/drg.png" alt="drg"></button>
+                    <button class="b" id="nin_b"><img src="pic/nin.png" alt="nin"></button>
+                    <button class="b" id="sam_b"><img src="pic/sam.png" alt="sam"></button>
+                    <button class="b" id="blm_b"><img src="pic/blm.png" alt="blm"></button>
+                    <button class="b" id="smn_b"><img src="pic/smn.png" alt="smn"></button>
+                    <button class="b" id="rdm_b"><img src="pic/rdm.png" alt="rdm"></button>
+                    <button class="b" id="whm_b"><img src="pic/whm.png" alt="whm"></button>
+                    <button class="b" id="sch_b"><img src="pic/sch.png" alt="sch"></button>
+                    <button class="b" id="ast_b"><img src="pic/ast.png" alt="ast"></button>
+                </div>
 
-                    <div id="info" hidden>
+                <div class="mid" id="mid" hidden>
+                    <div id="info">
+                        <!--anything in info try to create in JS-->
                         <img src="pic/taline_daybreak.svg" alt="rdm">
 
                         <h3>Red Mage</h3>
-                        <h5>Zodiac ###-###</h5>
+                        <h5>Capricorn</h5>
+                        <h6>Dec 22 - Jan 21</h6>
                     </div>
-
-                    <div id="hover" hidden><img src="pic/logo_glow.png" alt="ffxiv_logo"></div>
-
-                    <div id="des" hidden>
+                    <!-- <div id="hover" hidden><img src="pic/logo_glow.png" alt="ffxiv_logo"></div> -->
+                    <div id="des">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus repellendus nostrum perspiciatis voluptate consequuntur repudiandae, ex perferendis tenetur! Ipsum impedit unde mollitia deserunt dolore harum odio hic nihil reprehenderit ullam!</p>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
     <script src="zodi.js"></script>

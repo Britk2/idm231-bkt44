@@ -1,33 +1,34 @@
-function wellOff() {
-    document.getElementById('welcome').hidden = true;
-    document.getElementById('ex_box').removeAttribute('hidden');
-    document.getElementById('calender').removeAttribute('hidden');
-    console.log('Help screen closed');
-}
-function helpOn() {
-    document.getElementById('welcome').removeAttribute('hidden');
-    document.getElementById('ex_box').hidden = true;
-    document.getElementById('calender').hidden = true;
-    document.getElementById('des').hidden=true;
-    document.getElementById('info').hidden=true;
-    console.log('Help screen opened');
-}
 
-function infoOn() {
-    document.getElementById('info').removeAttribute('hidden');
-    document.getElementById('des').removeAttribute('hidden');
-    document.getElementById('hover').hidden = true;
-    console.log('Info Revealed');
-}
 
-function hover() {
-    if (document.getElementById('des').hidden === true && document.getElementById('info').hidden === true)
-    {
-        document.getElementById('hover').removeAttribute('hidden');
-    }
-}
+const welcome = document.getElementById('welcome');
+const ex_box = document.getElementById('ex_box');
+const calender = document.getElementById('calender');
+const cl_but = document.getElementById('c_b');
+const back = document.getElementById('back');
 
-function blank() {
-    document.getElementById('hover').hidden = true;
- }
+const help = document.querySelectorAll('.help');
+
+help.forEach(button => {
+    button.addEventListener('click', () => {
+        welcome.hidden = !welcome.hidden;
+        ex_box.hidden = !ex_box.hidden;
+        calender.hidden = !calender.hidden;
+    })
+})
+
+
+const hov = document.getElementById('hover');
+const des = document.getElementById('mid');
+const b = document.querySelectorAll('#c_b');
+
+b.forEach(button => {
+    button.addEventListener('click', () => {
+        des.hidden = !des.hidden;
+        // cl_but.hidden = !cl_but.hidden;
+    })
+    // button.addEventListener('hover', () => {
+    //     hov.hidden = !hov.hidden;
+    // })
+})
+
 
