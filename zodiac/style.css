@@ -26,7 +26,7 @@ html{
 
 body{
     background-color: var(--b-color);
-    background-image: url("pic/background_1.svg");
+    background-image: url("pic/background.svg");
     background-repeat:no-repeat;
     background-size: cover;
     font-size: 100%;
@@ -123,13 +123,15 @@ button:hover{cursor:grab;}
 /*clean this .ok button up*/
 #k{
     width: 10rem;
-    height: 1rem;
+    height: 2rem;
     align-self: center;
     border-color: transparent;
-    border-radius: .5rem;
-    padding-bottom: 2rem;
+    border-radius: 1.75rem;
+    padding:.5rem;
     margin-top: 1rem;
     font-size: .75rem;
+    color: var(--t-color);
+    background-image: linear-gradient(var(--g1-color),var(--g2-color));
 }
 
 #c_b button{
