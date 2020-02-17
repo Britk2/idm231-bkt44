@@ -139,6 +139,10 @@ button:hover{cursor:grab;}
     border:0;
 }
 
+.b img{
+    width:7.5rem;
+}
+
 #info img{
     max-width: 6rem;
 }
@@ -159,7 +163,7 @@ button:hover{cursor:grab;}
     display: grid;
     position: absolute;
     top:60%;
-    left:20%;
+    left:25%;
     width: 24rem;
     grid-template-columns: repeat(3, 6rem);
     grid-template-rows: repeat(3,6rem);
