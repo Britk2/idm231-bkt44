@@ -13,11 +13,14 @@
         <div class="top">
             <header class="title">FFXIV ZODIAC</header>
         
+
+            <!--LOOK AT EXAMPLE FOR CALENDER-->
             <div id="calender" hidden>
                 <label id="input_label">Enter Your Birthday:</label>
-                <input type="date" year="Name" id="bday_input" placeholder="MM/DD/YYYY" required input maxlength="10">
-                <input type="submit" value="Submit" id="submit">
+                <input type="date" name="bday_input" id="bday_input" placeholder="MM/DD/YYYY" required input maxlength="10">
+                <input type="submit" name="submit" value="Submit" id="submit">
             </div>
+
         </div>
 
         <div id="welcome">
@@ -36,7 +39,7 @@
                     <div class="date_w">
                         <h1>Enter Date</h1>
                         <div class="calender_w">
-                            <h2>DD/MM/YY</h2>
+                            <h2>MM/DD/YYYY</h2>
                         </div>
                     </div>
                 </div>
@@ -63,18 +66,20 @@
                     <button class="b" id="ast_b"><img src="pic/ast.png" alt="ast"></button>
                 </div>
 
-                <div class="mid" id="mid" hidden>
-                    <div id="info">
-                        <!--anything in info try to create in JS-->
-                        <img src="pic/rdm_c.svg" alt="rdm">
-
-                        <h3>Red Mage</h3>
-                        <h5>Capricorn</h5>
-                        <h6>Dec 22 - Jan 21</h6>
-                    </div>
-                    <div id="hover" hidden><img src="pic/logo_glow.png" alt="ffxiv_logo"></div>
-                    <div id="des">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus repellendus nostrum perspiciatis voluptate consequuntur repudiandae, ex perferendis tenetur! Ipsum impedit unde mollitia deserunt dolore harum odio hic nihil reprehenderit ullam!</p>
+                <div id="mid_p">
+                    <div class="mid" id="mid" hidden>
+                        <div id="info">
+                            <!--anything in info try to create in JS-->
+                            <img id="picture" src="pic/rdm_c.svg" alt="rdm">
+    
+                            <h3 id="c_name">Red Mage</h3>
+                            <h5 id="name">Taline Daybreak</h5>
+                            <h6 id="date">Dec 22 - Jan 21</h6>
+                        </div>
+                        <div id="hover" hidden><img src="pic/logo_glow.png" alt="ffxiv_logo"></div>
+                        <div id="des">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus repellendus nostrum perspiciatis voluptate consequuntur repudiandae, ex perferendis tenetur! Ipsum impedit unde mollitia deserunt dolore harum odio hic nihil reprehenderit ullam!</p>
+                        </div>
                     </div>
                 </div>
             </div>

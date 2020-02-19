@@ -20,6 +20,12 @@ const b = document.querySelectorAll('.b');
 console.log(b);
 
 b.forEach(button => {
+
+
+    if (x=x) { };
+
+
+
     button.addEventListener('click', () => {
         des.hidden = !des.hidden;
     })
@@ -31,4 +37,20 @@ b.forEach(button => {
     // }
 })
 
+function zodiac(cName, art, sound, name, date) { //job name, character art, sound
+    this.cName = cName;
+    this.art = art;
+    this.sound = sound;
+    this.name = name;
+    this.date = date;
+}
+  
+const info = new zodiac(document.getElementById('c_name').innerHTML, document.getElementById('picture'), 'N/A', document.getElementById('name').innerHTML, document.getElementById('date').innerHTML)
 
+const alt = document.getElementById('picture').alt;
+
+
+
+console.log(rdm);
+
+console.log(alt);

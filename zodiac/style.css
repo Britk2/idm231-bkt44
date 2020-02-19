@@ -66,6 +66,7 @@ ul{
 
     position: relative;
     left:25%;
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -98,9 +99,12 @@ h1{
 }
 
 .calender_w{
-    padding: .25rem 1rem;
+    padding: .25rem .75rem;
     border-radius: 1rem;
     background-color: var(--g1-color);
+}
+.calender_w h2{
+    margin: .75rem 0;
 }
 
 button:hover{cursor:grab;}
@@ -140,7 +144,7 @@ button:hover{cursor:grab;}
 }
 
 .b img{
-    width:7.5rem;
+    width:7rem;
 }
 
 #info img{
@@ -161,25 +165,32 @@ button:hover{cursor:grab;}
 
 .mid{
     display: grid;
-    position: absolute;
-    top:60%;
-    left:25%;
     width: 24rem;
+    height: 24rem;
     grid-template-columns: repeat(3, 6rem);
     grid-template-rows: repeat(3,6rem);
     align-items: center;
-    padding: 0;
-    margin: 0;
     grid-template-areas: 
     ". ino ."
     ". hov ."
     "des des des";
     gap: 3rem;
+
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top:1rem;
+    bottom:0;
+    margin: auto;
 }
 h6{margin-top: 0;}
 h5{margin-bottom: 0; padding-bottom: .5rem;}
-
-#mid{grid-area: mid;}
+/* 
+#mid_p{
+    position: absolute;
+    left:50%;
+    top:30%;
+} */
 
 #pld_b{grid-area:pld;}
 #war_b{grid-area:war;}
@@ -196,8 +207,6 @@ h5{margin-bottom: 0; padding-bottom: .5rem;}
 
 #c_b{
     display: grid;
-    position: relative;
-    top:15rem;
     grid-template-columns: repeat(5, 6rem);
     grid-template-rows: repeat(5,6rem);
     justify-content: center;
@@ -211,15 +220,16 @@ h5{margin-bottom: 0; padding-bottom: .5rem;}
     ". sch whm ast ."
     ;
     gap:3rem;
+
+    position: relative;
+    right:1rem;
 }
 
 #job{
     position: relative;
-    bottom: 12.5rem;
+    top:2.5rem;
 }
 
-@media screen and (min-width: 115rem){
+@media screen and (min-width: 100rem){
 #c_b{gap:5rem;}
-.mid{top:55.5%;
-    left:26%;}
 }
