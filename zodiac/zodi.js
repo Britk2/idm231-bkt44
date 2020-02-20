@@ -82,7 +82,7 @@ function sch() {
     info.cName.innerText = 'Scholar';
     info.art.src = 'pic/sch_c.svg';
     info.sound = 'sch_sound';
-    info.name.innerText = 'Ash ...';
+    info.name.innerText = 'Ashian Melido';
     info.date.innerText = 'Jul 23 - Aug 22';
     info.desc.innerText = 'In an age long past, when mankind flourished under the radiance of arcane mastery, the island of Vylbrand was home to a city-state called Nym. Though the history of that age tells of countless wars waged with earth-shattering incantations, it was the brilliant strategic maneuvering of Nym\'s scholars that allowed their mundane army of mariners to throw back would - be conquerers time and again. These learned men and women defended the freedom of their tiny nation with their unique command over spell - weaving faeries, utilizing the creatures\' magicks to heal the wounded and bolster the strength of their allies.';
 }
