@@ -181,7 +181,7 @@ b.forEach(button => {
     //     hov.hidden = !hov.hidden;})
     // }
 })
-function zodiac(cName, art, sound, name, date,desc) { //job name, character art, sound
+function zodiac(cName, art, sound, name, date, desc) { //job name, character art, sound
     this.cName = cName;
     this.art = art;
     this.sound = sound;
