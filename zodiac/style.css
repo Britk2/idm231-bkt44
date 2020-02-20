@@ -96,6 +96,11 @@ h1{
     display: flex;
     align-items: center;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.role li img{
+    width: 5rem;
 }
 
 .calender_w{
@@ -106,7 +111,6 @@ h1{
 .calender_w h2{
     margin: .75rem 0;
 }
-
 button:hover{cursor:grab;}
 
 #q, .sound{
@@ -124,7 +128,6 @@ button:hover{cursor:grab;}
 #q{right:1rem;}
 .sound{left:1rem;}
 
-/*clean this .ok button up*/
 #k{
     width: 10rem;
     height: 2rem;
@@ -154,49 +157,44 @@ button:hover{cursor:grab;}
 /*grid for the jobs listing*/
 
 #info{
-    grid-area:ino;
     text-align: center;
-    position: relative;
-    top:5rem;
 }
-#hover{grid-area: hov;}
 #hover img{width: 8rem;}
-#des{grid-area:des; text-align: center;}
+
+.mid img{
+    height: 10rem;
+}
+
+#des{
+    width: 90%;
+}
 
 .mid{
-    display: grid;
-    width: 24rem;
-    height: 24rem;
-    grid-template-columns: repeat(3, 6rem);
-    grid-template-rows: repeat(3,6rem);
+    display: flex;
+    flex-flow: column wrap;
+
+    width:65%;
+    height: 65%;
+
+    justify-content: space-around;
     align-items: center;
-    grid-template-areas: 
-    ". ino ."
-    ". hov ."
-    "des des des";
-    gap: 3rem;
 
     position: absolute; 
     left: 0; 
     right: 0; 
-    top:1rem;
+    top:0;
     bottom:0;
     margin: auto;
 }
-h6{margin-top: 0;}
+h6{margin: 0 auto;}
 h5{margin-bottom: 0; padding-bottom: .5rem;}
-/* 
-#mid_p{
-    position: absolute;
-    left:50%;
-    top:30%;
-} */
+
 
 #pld_b{grid-area:pld;}
 #war_b{grid-area:war;}
 #drk_b{grid-area:drk;}
 #drg_b{grid-area:drg;}
-#nin_b{grid-area:nin;}
+#dnc_b{grid-area:dnc;}
 #sam_b{grid-area:sam;}
 #blm_b{grid-area:blm;}
 #smn_b{grid-area:smn;}
@@ -213,11 +211,11 @@ h5{margin-bottom: 0; padding-bottom: .5rem;}
     align-items: center;
 
     grid-template-areas: 
-    ". war pld drk ."
-    "drg . . . blm"
-    "sam . . . rdm"
-    "nin . . . smn"
-    ". sch whm ast ."
+    ". sam rdm smn ."
+    "war . . . pld"
+    "ast . . . blm"
+    "dnc . . . drk"
+    ". sch whm drg ."
     ;
     gap:3rem;
 
