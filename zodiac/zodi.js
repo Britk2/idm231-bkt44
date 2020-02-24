@@ -19,8 +19,7 @@ function sw() {
         {des.hidden = !des.hidden;}
 }
 
-function rdm()
-{
+function rdm() {
     info.cName.innerText = 'Red Mage';
     info.art.src = 'pic/rdm_c.svg';
     info.sound = 'rdm_sound';
@@ -28,8 +27,7 @@ function rdm()
     info.date.innerText = 'Dec 22 - Jan 19';
     info.desc.innerText = 'On the eastern edge of Abalathia\'s Spine lies the mountainous region of Gyr Abania. It is in these elevated lands that people took shelter, when a burning star guided them away from the Sixth Umbral Calamity\'s treacherous floodwaters. The survivors gathered from near and far, and amongst them were refugees of the sorcerous cities of Mhach and Amdapor. These sworn enemies buried their history for the sake of the future, and cast aside their vestments of black and white. Upon the remnants of their arts a new discipline was built, and the first red mages stepped forward with rapiers in hand to fight back against the rising tides of destruction.';
 }
-function smn()
-{
+function smn() {
     info.cName.innerText = 'Summoner';
     info.art.src = 'pic/smn_c.svg';
     info.sound = 'smn_sound';
@@ -37,8 +35,7 @@ function smn()
     info.date.innerText = 'Jan 20 - Feb 18';
     info.desc.innerText = 'The beast tribes of Eorzea worship and summon forth beings known as primals, among which are Ifrit, Garuda, and Titan. Yet what is a god to one man is a demon to another, for the city-states of Eorzea see these beings as a grave threat to their collective survival. In times immemorial, there lived mages who had not only the power to summon the primals, but also the means to transmute the primals\' essences, thus binding them to their will. Known simply as summoners, the existence of these men and women and their arcane art have been all but lost to the ages.';
 }
-function pld()
-{
+function pld() {
     info.cName.innerText = 'Paladin';
     info.art.src = 'pic/pld_c.svg';
     info.sound = 'pld_sound';
@@ -66,7 +63,7 @@ function drg() {
     info.cName.innerText = 'Dragoon';
     info.art.src = 'pic/drg_c.svg';
     info.sound = 'drg_sound';
-    info.name.innerText = 'Zen ...';
+    info.name.innerText = 'ZenGetzume Mejia';
     info.date.innerText = 'May 21 - Jun 21';
     info.desc.innerText = 'Of all the things that are symbolic of the nation of Ishgard, few are more recognized than the dragoon. Born amidst the timeless conflict between men and dragons, these lance-wielding knights have developed an aerial style of combat, that they might better pierce the scaled hides of their mortal foes. Taking to the firmament as though it were an extension of the land, they descend upon the enemy with every onze of their bodies behind the blow. It is this penetrative power that characterizes the dragoon.';
 }
@@ -115,7 +112,7 @@ function sam() {
     info.art.src = 'pic/sam_c.svg';
     info.sound = 'sam_sound';
     info.name.innerText = 'Kaede Akamatsu';
-    info.date.innerText = 'Nov 21 - Dec 21';
+    info.date.innerText = 'Nov 22 - Dec 21';
     info.desc.innerText = 'Far across the rolling waves, towards the rising sun, there lies the island nation of Hingashi. In the distant past, the realm\'s great lords vied for supremacy over its seagirt confines in a long and bloody conflict. And taking to battle in their lieges\' names were noble swordsmen whose art was forged in the crucible of war: the samurai. Eventually, the nation was unified under one banner, and these warriors came to wield their katana not upon fields as part of an army, but upon streets as protectors of the peace. But as a neglected blade grows dull with rust, so too do men forget their purpose. Amidst waning memories of the old ways, a determined few hold fast to their convictions, hands by katana grips, awaiting the moment for steel to sing.';
 }
 b.forEach(button => {
@@ -124,47 +121,36 @@ b.forEach(button => {
         switch (id) {
             case 'rdm_b':
                 rdm();
-                sw();
                 break;
             case 'smn_b':
                 smn();
-                sw();
                 break;
             case 'pld_b':
                 pld();
-                sw();
                 break;
             case 'blm_b':
                 blm();
-                sw();
                 break;
             case 'drk_b':
                 drk();
-                sw();
                 break;
             case 'drg_b':
                 drg();
-                sw();
                 break;
             case 'whm_b':
                 whm();
-                sw();
                 break;
             case 'sch_b':
                 sch();
-                sw();
                 break;
             case 'dnc_b':
                 dnc();
-                sw();
                 break;
             case 'ast_b':
                 ast();
-                sw();
                 break;
             case 'war_b':
                 war();
-                sw();
                 break;
             case 'sam_b':
                 sam();
@@ -173,6 +159,7 @@ b.forEach(button => {
             default:
                 console.log('something happened?')
         }
+        sw();
     })
     // if (des.hidden != false) {
     //     button.addEventListener('mouseover', () => {
@@ -181,7 +168,7 @@ b.forEach(button => {
     //     hov.hidden = !hov.hidden;})
     // }
 })
-function zodiac(cName, art, sound, name, date, desc) { //job name, character art, sound
+function zodiac(cName, art, sound, name, date, desc) { //class name, character art, sound, character name, date range, desc
     this.cName = cName;
     this.art = art;
     this.sound = sound;
@@ -191,10 +178,10 @@ function zodiac(cName, art, sound, name, date, desc) { //job name, character art
 } 
 const info = new zodiac(
     document.getElementById('c_name'),
-    document.getElementById('picture'), 'N/A',
+    document.getElementById('picture'),
+    'N/A',
     document.getElementById('name'),
     document.getElementById('date'),
     document.getElementById('des')
 )
-
-console.log(info)
+// console.log(info)
