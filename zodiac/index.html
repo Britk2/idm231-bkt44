@@ -7,17 +7,36 @@
     <title>FFXIV Zodiac</title>
     <link rel="stylesheet" type="text/css" href="normal.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <div class="page">
         <div class="top">
             <header class="title">FFXIV ZODIAC</header>
             <!--LOOK AT EXAMPLE FOR CALENDER-->
-            <div id="calender" hidden>
-                <label id="input_label">Enter Your Birthday:</label>
-                <input type="date" name="bday_input" id="bday_input" placeholder="MM/DD/YYYY" required input maxlength="10">
-                <input type="submit" name="submit" value="Submit" id="submit">
-            </div>
+            <form id="bday_form">
+                <div id="calender" hidden>
+                    <label for="bday">Enter Your Birthday:</label>
+                    <input type="date" name="bday" id="bday" placeholder="MM/DD/YYYY" required input maxlength="10">
+                    <input type="submit" name="submit" value="Submit" id="submit">
+                </div>
+            </form>
 
         </div>
         <div id="welcome">
@@ -63,7 +82,7 @@
                     <button class="b" id="ast_b"><img src="pic/ast.svg" alt="ast"></button>
                 </div>
                 <div class="mid" id="mid" hidden>
-                    <img id="picture" src="pic/rdm_c.svg" alt="rdm">
+                    <img id="picture" src="" alt="rdm">
                     <div id="info">
                         <h3 id="name"></h3>
                         <h5 id="c_name"></h5>

@@ -1,8 +1,6 @@
 const welcome = document.getElementById('welcome');
 const ex_box = document.getElementById('ex_box');
 const calender = document.getElementById('calender');
-const cl_but = document.getElementById('c_b');
-const back = document.getElementById('back');
 const help = document.querySelectorAll('.help');
 help.forEach(button => {
     button.addEventListener('click', () => {
@@ -11,7 +9,7 @@ help.forEach(button => {
         calender.hidden = !calender.hidden;
     })
 })
-const hov = document.getElementById('hover');
+// const hov = document.getElementById('hover');
 const des = document.getElementById('mid');
 const b = document.querySelectorAll('.b');
 function sw() {
@@ -115,6 +113,7 @@ function sam() {
     info.date.innerText = 'Nov 22 - Dec 21';
     info.desc.innerText = 'Far across the rolling waves, towards the rising sun, there lies the island nation of Hingashi. In the distant past, the realm\'s great lords vied for supremacy over its seagirt confines in a long and bloody conflict. And taking to battle in their lieges\' names were noble swordsmen whose art was forged in the crucible of war: the samurai. Eventually, the nation was unified under one banner, and these warriors came to wield their katana not upon fields as part of an army, but upon streets as protectors of the peace. But as a neglected blade grows dull with rust, so too do men forget their purpose. Amidst waning memories of the old ways, a determined few hold fast to their convictions, hands by katana grips, awaiting the moment for steel to sing.';
 }
+
 b.forEach(button => {
     const id = button.id;
     button.addEventListener('click', () => {
@@ -168,7 +167,7 @@ b.forEach(button => {
     //     hov.hidden = !hov.hidden;})
     // }
 })
-function zodiac(cName, art, sound, name, date, desc) { //class name, character art, sound, character name, date range, desc
+function zodiac(cName, art, sound, name, date, desc) { //className,characterArt,sound,characterName,dateRange, desc
     this.cName = cName;
     this.art = art;
     this.sound = sound;
@@ -176,6 +175,7 @@ function zodiac(cName, art, sound, name, date, desc) { //class name, character a
     this.date = date;
     this.desc = desc;
 } 
+
 const info = new zodiac(
     document.getElementById('c_name'),
     document.getElementById('picture'),
@@ -184,4 +184,4 @@ const info = new zodiac(
     document.getElementById('date'),
     document.getElementById('des')
 )
-// console.log(info)
+console.log(info)
