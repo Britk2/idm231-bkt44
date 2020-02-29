@@ -31,10 +31,12 @@
             <header class="title">FFXIV ZODIAC</header>
             <!--LOOK AT EXAMPLE FOR CALENDER-->
             <form id="bday_form">
-                <div id="calender" hidden>
+                <div class="calender" hidden>
                     <label for="bday">Enter Your Birthday:</label>
-                    <input type="date" name="bday" id="bday" placeholder="MM/DD/YYYY" required input maxlength="10">
-                    <input type="submit" name="submit" value="Submit" id="submit">
+                    <input type="date" name="bday" id="bday" placeholder="MM/DD/YYYY" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
+                </div>
+                <div class="calender" hidden>
+                    <input type="submit" value="Submit">
                 </div>
             </form>
 

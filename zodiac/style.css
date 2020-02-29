@@ -141,6 +141,12 @@ button:hover{cursor:grab;}
     background-image: linear-gradient(var(--g1-color),var(--g2-color));
 }
 
+#bday_form{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+}
+
 #c_b button{
     background-color: transparent;
     border:0;

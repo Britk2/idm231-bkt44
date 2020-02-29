@@ -1,14 +1,72 @@
 const welcome = document.getElementById('welcome');
 const ex_box = document.getElementById('ex_box');
-const calender = document.getElementById('calender');
+const calender = document.getElementsByClassName('calender');
 const help = document.querySelectorAll('.help');
+
+console.log(calender);
+
 help.forEach(button => {
     button.addEventListener('click', () => {
         welcome.hidden = !welcome.hidden;
         ex_box.hidden = !ex_box.hidden;
-        calender.hidden = !calender.hidden;
+        for (let i = 0; i < calender.length; i++){
+            calender[i].hidden = !calender[i].hidden;
+        }
     })
 })
+
+const bdayForm = document.getElementById('bday_form');
+
+const handleBirthdayForm = event => {
+    event.preventDefault();
+    const bdayInput = document.getElementById('bday');
+    const bdayValue = bdayInput.value;
+    let month, day;
+  
+    console.log('bdayValue:', bdayValue);
+  
+    if (bdayValue.includes('/')) {
+        const dateArray = bdayValue.split('/');
+        month = dateArray[0];
+        day = dateArray[1];
+    } else {
+        const bday = new Date(`${bdayValue}T00:00`);
+        month = bday.getMonth() + 1;
+        day = bday.getDate();
+    }
+  
+    console.log('month: ', month);
+    console.log('day: ', day);
+
+    if ((month == 12 && day >= 22) || (month == 1 && day <= 19))
+    {/* AstroSign = "Cap";*/ rdm(); sw();} else
+    if ((month == 11 && day >= 22) || (month == 12 && day <= 21))
+    {/*AstroSign = "Sag";*/ sam(); sw();} else
+    if ((month == 10 && day >= 24) || (month == 11 && day <= 21))
+    {/*AstroSign = "Sco";*/ war(); sw();} else
+    if ((month == 9 && day >= 23) || (month == 10 && day <= 23))
+    {/*AstroSign = "Lib";*/ ast(); sw();} else
+    if ((month == 8 && day >= 23) || (month == 9 && day <= 22))
+    {/*AstroSign = "Vir";*/ dnc(); sw();} else
+    if ((month == 7 && day >= 23) || (month == 8 && day <= 22))
+    {/*AstroSign = "Leo";*/ sch(); sw();} else
+    if ((month == 6 && day >= 22) || (month == 7 && day <= 22))
+    {/*AstroSign = "Can";*/ whm(); sw();} else
+    if ((month == 5 && day >= 21) || (month == 6 && day <= 21))
+    {/*AstroSign = "Gem";*/ drg(); sw();} else
+    if ((month == 4 && day >= 20) || (month == 5 && day <= 20))
+    {/*AstroSign = "Tau";*/ drk(); sw();} else
+    if ((month == 3 && day >= 21) || (month == 4 && day <= 19))
+    {/*AstroSign = "Ari";*/ blm(); sw();} else
+    if ((month == 2 && day >= 19) || (month == 3 && day <= 20))
+    {/*AstroSign = "Pis";*/ pld(); sw();} else
+    if ((month == 1 && day >= 20) || (month == 2 && day <= 18))
+    {/*AstroSign = "Aqu";*/ smn(); sw();}
+};
+
+bdayForm.addEventListener('submit', handleBirthdayForm);
+
+
 // const hov = document.getElementById('hover');
 const des = document.getElementById('mid');
 const b = document.querySelectorAll('.b');
