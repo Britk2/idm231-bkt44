@@ -1,12 +1,17 @@
 @import "normal.css";
 
 :root{
-    --b-color: #153958; /*background color*/
-    --t-color: #B3B3B3; /*text color*/
-    --sp1-color: #DBB75D; /*special color*/
-    --sp2-color: #FBB03B;
-    --g1-color: #4D4D4D; /*gradient colors*/
-    --g2-color: #1A1A1A; 
+    --background-c: #153958; /*background color*/
+    --text-c: #e1d5bb; /*text color*/
+    --text-c2:#3e3e3e;
+    --border-c-1: #d7c07e; /*border color*/
+    --border-c-2: #9f8c62;
+    --grey-grad-1: #434243; /*gradient colors*/
+    --grey-grad-2: #171717; 
+    --button-light:#b24525; /*button color*/
+    --button-dark:#442211;
+    --quest-light:#e7dfd6;
+    --quest-dark:#a39e98;
 }
 
 html{
@@ -25,12 +30,12 @@ html{
 }
 
 body{
-    background-color: var(--b-color);
+    background-color: var(--background-c);
     background-image: url("pic/background.svg");
     background-repeat:no-repeat;
     background-size: cover;
     font-size: 100%;
-    color:var(--t-color);
+    color:var(--text-c);
 }
 ul{
     list-style-type: none;
@@ -58,8 +63,8 @@ ul{
 .welcome{
     z-index: 10;
     width:50%;
-    background-image: linear-gradient(var(--g1-color),var(--g2-color));
-    border: solid 2px var(--sp1-color);
+    background-image: linear-gradient(var(--grey-grad-1),var(--grey-grad-2));
+    border: solid 2px var(--border-c-1);
     border-radius: .5rem;
     padding: 2rem;
     margin: 1rem;
@@ -76,7 +81,7 @@ ul{
 .welcome header{
     text-align: center;
     font-size: 300%;
-    color: var(--sp2-color);
+    color: var(--border-c-2);
 }
 
 .st_op{
@@ -106,7 +111,7 @@ h1{
 .calender_w{
     padding: .25rem .75rem;
     border-radius: 1rem;
-    background-color: var(--g1-color);
+    background-color: var(--grey-grad-1);
 }
 .calender_w h2{
     margin: .75rem 0;
@@ -114,10 +119,10 @@ h1{
 button:hover{cursor:grab;}
 
 #q, .sound{
-    background-image: linear-gradient(var(--g1-color),var(--g2-color));
+    background-image: linear-gradient(var(--button-light),var(--button-dark));
     border-radius: 1rem;
-    border-color: var(--sp1-color);
-    color: var(--sp2-color);
+    border-color: var(--border-c-1);
+    color: var(--border-c-2);
     padding: 1rem;
     text-align: center;
     text-decoration: none;
@@ -137,8 +142,8 @@ button:hover{cursor:grab;}
     padding:.5rem;
     margin-top: 1rem;
     font-size: .75rem;
-    color: var(--t-color);
-    background-image: linear-gradient(var(--g1-color),var(--g2-color));
+    color: var(--text-c);
+    background-image: linear-gradient(var(--grey-grad-1),var(--grey-grad-2));
 }
 
 #bday_form{
@@ -172,16 +177,14 @@ button:hover{cursor:grab;}
     padding-top: 1rem;
 }
 
-#des{
-    width: 90%;
-}
+#des{width: 60ch;}
 
-.mid{
+#mid{
     display: flex;
     flex-flow: column wrap;
 
-    width:71%;
-    height: 71%;
+    width:65%;
+    height: 65%;
 
     justify-content: start;
     align-items: center;
@@ -192,7 +195,27 @@ button:hover{cursor:grab;}
     top:0;
     bottom:0;
     margin: auto;
+
+    font-size: .70rem;
+    background-color: var(--quest-light);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 7pt 5pt var(--quest-dark);
+    border: ridge 5px var(--border-c-1);
+    color: var(--text-c2);
 }
+
+#close{
+    position: absolute;
+    right: .5rem; 
+    top:.5rem;
+    margin: auto;
+    z-index: 20;
+    background-color: transparent;
+    border-color:transparent;
+    color:  var(--border-c-2);
+    font-weight: bolder;
+}
+
 h3{margin-bottom: .5rem;}
 h6{margin: 0rem; padding-bottom: .5rem;}
 h5{margin: .5rem;}
@@ -225,7 +248,7 @@ h5{margin: .5rem;}
     "dnc . . . drk"
     ". sch whm drg ."
     ;
-    gap:3rem;
+    gap:2rem;
 
     position: relative;
     right:1rem;
@@ -236,6 +259,13 @@ h5{margin: .5rem;}
     top:2.5rem;
 }
 
-@media screen and (min-width: 100rem){
-#c_b{gap:5rem;}
+@media screen and (min-width: 85rem){
+    #c_b{gap:5rem;}
+    #mid{font-size: 1rem;}
+    #des{width: 55ch;}
+}
+
+@media screen and (min-width: 115rem){
+#c_b{gap:7.5rem;}
+#mid{font-size: 1.25rem;}
 }

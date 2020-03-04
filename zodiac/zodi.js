@@ -2,6 +2,7 @@ const welcome = document.getElementById('welcome');
 const ex_box = document.getElementById('ex_box');
 const calender = document.getElementsByClassName('calender');
 const help = document.querySelectorAll('.help');
+const close = document.getElementById('close');
 
 console.log(calender);
 
@@ -39,31 +40,32 @@ const handleBirthdayForm = event => {
     console.log('day: ', day);
 
     if ((month == 12 && day >= 22) || (month == 1 && day <= 19))
-    {/* AstroSign = "Cap";*/ rdm(); sw();} else
+    {/* AstroSign = "Cap";*/ rdm();} else
     if ((month == 11 && day >= 22) || (month == 12 && day <= 21))
-    {/*AstroSign = "Sag";*/ sam(); sw();} else
+    {/*AstroSign = "Sag";*/ sam();} else
     if ((month == 10 && day >= 24) || (month == 11 && day <= 21))
-    {/*AstroSign = "Sco";*/ war(); sw();} else
+    {/*AstroSign = "Sco";*/ war();} else
     if ((month == 9 && day >= 23) || (month == 10 && day <= 23))
-    {/*AstroSign = "Lib";*/ ast(); sw();} else
+    {/*AstroSign = "Lib";*/ ast();} else
     if ((month == 8 && day >= 23) || (month == 9 && day <= 22))
-    {/*AstroSign = "Vir";*/ dnc(); sw();} else
+    {/*AstroSign = "Vir";*/ dnc();} else
     if ((month == 7 && day >= 23) || (month == 8 && day <= 22))
-    {/*AstroSign = "Leo";*/ sch(); sw();} else
+    {/*AstroSign = "Leo";*/ sch();} else
     if ((month == 6 && day >= 22) || (month == 7 && day <= 22))
-    {/*AstroSign = "Can";*/ whm(); sw();} else
+    {/*AstroSign = "Can";*/ whm();} else
     if ((month == 5 && day >= 21) || (month == 6 && day <= 21))
-    {/*AstroSign = "Gem";*/ drg(); sw();} else
+    {/*AstroSign = "Gem";*/ drg();} else
     if ((month == 4 && day >= 20) || (month == 5 && day <= 20))
-    {/*AstroSign = "Tau";*/ drk(); sw();} else
+    {/*AstroSign = "Tau";*/ drk();} else
     if ((month == 3 && day >= 21) || (month == 4 && day <= 19))
-    {/*AstroSign = "Ari";*/ blm(); sw();} else
+    {/*AstroSign = "Ari";*/ blm();} else
     if ((month == 2 && day >= 19) || (month == 3 && day <= 20))
-    {/*AstroSign = "Pis";*/ pld(); sw();} else
+    {/*AstroSign = "Pis";*/ pld();} else
     if ((month == 1 && day >= 20) || (month == 2 && day <= 18))
-    {/*AstroSign = "Aqu";*/ smn(); sw();}
+    {/*AstroSign = "Aqu";*/ smn();}
+    
+    sw();
 };
-
 bdayForm.addEventListener('submit', handleBirthdayForm);
 
 
@@ -72,8 +74,14 @@ const des = document.getElementById('mid');
 const b = document.querySelectorAll('.b');
 function sw() {
     if (des.hidden = true)
-        {des.hidden = !des.hidden;}
+    { des.hidden = !des.hidden; }
 }
+
+close.addEventListener('click', () => {
+    if (close.hidden != true) {
+        des.hidden = !des.hidden;
+    }
+}, false);
 
 function rdm() {
     info.cName.innerText = 'Red Mage';
