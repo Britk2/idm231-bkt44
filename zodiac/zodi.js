@@ -3,6 +3,7 @@ const ex_box = document.getElementById('ex_box');
 const calender = document.getElementsByClassName('calender');
 const help = document.querySelectorAll('.help');
 const close = document.getElementById('close');
+const speaker = document.getElementById('speaker');
 
 console.log(calender);
 
@@ -86,7 +87,7 @@ close.addEventListener('click', () => {
 function rdm() {
     info.cName.innerText = 'Red Mage';
     info.art.src = 'pic/rdm_c.svg';
-    info.sound = 'rdm_sound';
+    info.sound.src = 'audio/FFXIV_Start_Game.mp3';
     info.name.innerText = 'Taline Daybreak';
     info.date.innerText = 'Dec 22 - Jan 19';
     info.desc.innerText = 'On the eastern edge of Abalathia\'s Spine lies the mountainous region of Gyr Abania. It is in these elevated lands that people took shelter, when a burning star guided them away from the Sixth Umbral Calamity\'s treacherous floodwaters. The survivors gathered from near and far, and amongst them were refugees of the sorcerous cities of Mhach and Amdapor. These sworn enemies buried their history for the sake of the future, and cast aside their vestments of black and white. Upon the remnants of their arts a new discipline was built, and the first red mages stepped forward with rapiers in hand to fight back against the rising tides of destruction.';
@@ -225,14 +226,15 @@ b.forEach(button => {
                 console.log('something happened?')
         }
         sw();
-    })
+        speaker.play();
+    });
     // if (des.hidden != false) {
     //     button.addEventListener('mouseover', () => {
     //     hov.hidden = !hov.hidden;})
     // button.addEventListener('mouseout', () => {
     //     hov.hidden = !hov.hidden;})
     // }
-})
+});
 function zodiac(cName, art, sound, name, date, desc) { //className,characterArt,sound,characterName,dateRange, desc
     this.cName = cName;
     this.art = art;
@@ -245,7 +247,7 @@ function zodiac(cName, art, sound, name, date, desc) { //className,characterArt,
 const info = new zodiac(
     document.getElementById('c_name'),
     document.getElementById('picture'),
-    'N/A',
+    speaker,
     document.getElementById('name'),
     document.getElementById('date'),
     document.getElementById('des')
