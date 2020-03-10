@@ -4,8 +4,11 @@ const calender = document.getElementsByClassName('calender');
 const help = document.querySelectorAll('.help');
 const close = document.getElementById('close');
 const speaker = document.getElementById('speaker');
+const input = document.getElementById('bday');
 
 console.log(calender);
+
+
 
 help.forEach(button => {
     button.addEventListener('click', () => {
@@ -14,11 +17,21 @@ help.forEach(button => {
         for (let i = 0; i < calender.length; i++){
             calender[i].hidden = !calender[i].hidden;
         }
+        if (!welcome.hidden) {
+            speaker.src = "audio/FFXIV_Open_Window.mp3";
+        } else {
+            speaker.src = "audio/FFXIV_Close_Window.mp3";
+        }
+        p();
     })
 })
 
 const bdayForm = document.getElementById('bday_form');
 
+input.addEventListener('focus', () => {
+    speaker.src = "audio/FFXIV_Enter_Chat.mp3";
+    p();
+})
 const handleBirthdayForm = event => {
     event.preventDefault();
     const bdayInput = document.getElementById('bday');
@@ -73,6 +86,10 @@ bdayForm.addEventListener('submit', handleBirthdayForm);
 // const hov = document.getElementById('hover');
 const des = document.getElementById('mid');
 const b = document.querySelectorAll('.b');
+
+function p() {
+    speaker.play();
+}
 function sw() {
     if (des.hidden = true)
     { des.hidden = !des.hidden; }
@@ -81,6 +98,8 @@ function sw() {
 close.addEventListener('click', () => {
     if (close.hidden != true) {
         des.hidden = !des.hidden;
+        speaker.src = "audio/FFXIV_Close_Window.mp3";
+        p();
     }
 }, false);
 
@@ -151,7 +170,7 @@ function sch() {
 function dnc() {
     info.cName.innerText = 'Dancer';
     info.art.src = 'pic/dnc_c.svg';
-    info.sound = 'dnc_sound';
+    info.sound.src = 'audio/dnc.mp3';
     info.name.innerText = 'Dorian Monroe';
     info.date.innerText = 'Aug 23 - Sep 22';
     info.desc.innerText = 'From the Near Eastern nation of Thavnair comes a troupe of bewitchingly graceful performers. Though certainly elegant and beautiful, their movements also speak of martial discipline─of a pulsing, persistent energy whose rhythm can inspire souls and soothe troubled hearts. Inured to the hardships of the road, these dancers have learned to land throwing weapons with the same exacting precision as their footfalls, removing any who would obstruct the endless beat of the dance.';
@@ -226,7 +245,7 @@ b.forEach(button => {
                 console.log('something happened?')
         }
         sw();
-        speaker.play();
+        p();
     });
     // if (des.hidden != false) {
     //     button.addEventListener('mouseover', () => {
@@ -253,3 +272,12 @@ const info = new zodiac(
     document.getElementById('des')
 )
 console.log(info)
+
+function start() {
+    speaker.src = "audio/FFXIV_Start_Game.mp3";
+p();
+}
+window.addEventListener('load', () => {
+    speaker.src = "audio/FFXIV_Start_Game.mp3";
+    p();
+}, false);
