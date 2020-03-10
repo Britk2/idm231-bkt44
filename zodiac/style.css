@@ -177,7 +177,7 @@ button:hover{cursor:grab;}
     padding-top: 1rem;
 }
 
-#des{width: 60ch;}
+#des{width: 60ch; padding: .25rem .5rem;}
 
 #mid{
     display: flex;
@@ -248,7 +248,8 @@ h5{margin: .5rem;}
     "dnc . . . drk"
     ". sch whm drg ."
     ;
-    gap:2rem;
+    grid-row-gap: 2rem;
+    grid-column-gap: 3rem;
 
     position: relative;
     right:1rem;
@@ -259,13 +260,13 @@ h5{margin: .5rem;}
     top:2.5rem;
 }
 
-@media screen and (min-width: 85rem){
-    #c_b{gap:5rem;}
+@media screen and (min-width: 87.5rem){
+    #c_b{grid-row-gap: 4rem; grid-column-gap: 5rem;}
     #mid{font-size: 1rem;}
     #des{width: 55ch;}
 }
 
 @media screen and (min-width: 115rem){
-#c_b{gap:7.5rem;}
+#c_b{grid-row-gap: 6rem; grid-column-gap: 7rem;}
 #mid{font-size: 1.25rem;}
 }

@@ -6,6 +6,9 @@ const close = document.getElementById('close');
 const speaker = document.getElementById('speaker');
 const speaks = document.getElementById('speaks');
 const input = document.getElementById('bday');
+
+speaker.volume = .5;
+speaks.volume = .5;
 // console.log(calender);
 
 help.forEach(button => {
