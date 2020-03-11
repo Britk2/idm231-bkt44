@@ -6,10 +6,31 @@ const close = document.getElementById('close');
 const speaker = document.getElementById('speaker');
 const speaks = document.getElementById('speaks');
 const input = document.getElementById('bday');
+const mute = document.getElementById('mute');
+const onS = document.getElementById('on');
+const offS = document.getElementById('off');
+
+console.log(mute.firstChild);
+console.log(mute.lastChild);
 
 speaker.volume = .5;
 speaks.volume = .5;
 // console.log(calender);
+
+mute.addEventListener('click', () => {
+    if (!mute.firstChild.hidden && mute.lastChild.hidden) {
+        mute.firstChild.hidden = !mute.firstChild.hidden;
+        mute.lastChild.hidden = !mute.lastChild.hidden;
+        speaks.pause();
+        console.log('sound off');
+    }else
+    {
+        mute.firstChild.hidden = !mute.firstChild.hidden;
+        mute.lastChild.hidden = !mute.lastChild.hidden;
+        console.log('sound on');
+        p2();
+    }
+})
 
 help.forEach(button => {
     button.addEventListener('click', () => {
@@ -80,7 +101,7 @@ const handleBirthdayForm = event => {
     {/*AstroSign = "Aqu";*/ smn();}
     
     sw();
-    speaks.play();
+    p2();
 };
 bdayForm.addEventListener('submit', handleBirthdayForm);
 
@@ -89,7 +110,14 @@ const des = document.getElementById('mid');
 const b = document.querySelectorAll('.b');
 
 function p() {
-    speaker.play();
+    if (!mute.firstChild.hidden) {
+        speaker.play();
+    }
+}
+function p2() {
+    if (!mute.firstChild.hidden) {
+        speaks.play();
+    }
 }
 function sw() {
     if (des.hidden = true)
@@ -247,7 +275,7 @@ b.forEach(button => {
                 console.log('something happened?')
         }
         sw();
-        speaks.play();
+        p2();
     });
     // if (des.hidden != false) {
     //     button.addEventListener('mouseover', () => {

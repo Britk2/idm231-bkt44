@@ -132,6 +132,9 @@ button:hover{cursor:grab;}
 #q, .sound{position: absolute; top:1rem;}
 #q{right:1rem;}
 .sound{left:1rem;}
+#mute img{
+    width:2rem;
+}
 
 #k{
     width: 10rem;
@@ -173,11 +176,11 @@ button:hover{cursor:grab;}
 #hover img{width: 8rem;}
 
 .mid img{
-    height: 9rem;
+    height: 8rem;
     padding-top: 1rem;
 }
 
-#des{width: 60ch; padding: .25rem .5rem;}
+#des{width: 65ch; padding: .25rem .5rem;}
 
 #mid{
     display: flex;
@@ -248,8 +251,8 @@ h5{margin: .5rem;}
     "dnc . . . drk"
     ". sch whm drg ."
     ;
-    grid-row-gap: 2rem;
-    grid-column-gap: 3rem;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
 
     position: relative;
     right:1rem;
