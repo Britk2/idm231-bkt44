@@ -11,8 +11,8 @@ const onS = document.getElementById('on');
 const offS = document.getElementById('off');
 const hov = document.getElementById('hover');
 
-speaker.volume = .5;
-speaks.volume = .5;
+speaker.volume = 0.25;
+speaks.volume = 0.25;
 
 mute.addEventListener('click', () => {
     if (!mute.firstChild.hidden && mute.lastChild.hidden) {
@@ -106,12 +106,12 @@ const des = document.getElementById('mid');
 const b = document.querySelectorAll('.b');
 
 function p() {
-    if (!mute.firstChild.hidden) {
+    if (!mute.firstChild.hidden && des.hidden) {
         speaker.play();
     }
 }
 function p2() {
-    if (!mute.firstChild.hidden) {
+    if (!mute.firstChild.hidden && !des.hidden) {
         speaks.play();
     }
 }
