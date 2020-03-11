@@ -9,13 +9,10 @@ const input = document.getElementById('bday');
 const mute = document.getElementById('mute');
 const onS = document.getElementById('on');
 const offS = document.getElementById('off');
-
-console.log(mute.firstChild);
-console.log(mute.lastChild);
+const hov = document.getElementById('hover');
 
 speaker.volume = .5;
 speaks.volume = .5;
-// console.log(calender);
 
 mute.addEventListener('click', () => {
     if (!mute.firstChild.hidden && mute.lastChild.hidden) {
@@ -49,7 +46,6 @@ help.forEach(button => {
 })
 
 const bdayForm = document.getElementById('bday_form');
-
 input.addEventListener('focus', () => {
     speaker.src = "audio/FFXIV_Enter_Chat.mp3";
     p();
@@ -120,7 +116,7 @@ function p2() {
     }
 }
 function sw() {
-    if (des.hidden = true)
+    if (des.hidden)
     { des.hidden = !des.hidden; }
 }
 
@@ -277,12 +273,10 @@ b.forEach(button => {
         sw();
         p2();
     });
-    // if (des.hidden != false) {
-    //     button.addEventListener('mouseover', () => {
-    //     hov.hidden = !hov.hidden;})
-    // button.addEventListener('mouseout', () => {
-    //     hov.hidden = !hov.hidden;})
-    // }
+    if (des.hidden) {
+        button.addEventListener('mouseover', () => {hov.hidden = !hov.hidden; }, false);
+        button.addEventListener('mouseout', () => {hov.hidden = !hov.hidden; }, false);
+    }
 });
 function zodiac(cName, art, sound, name, date, desc) { //className,characterArt,sound,characterName,dateRange, desc
     this.cName = cName;
