@@ -11,8 +11,8 @@ const onS = document.getElementById('on');
 const offS = document.getElementById('off');
 const hov = document.getElementById('hover');
 
-speaker.volume = 0.25;
-speaks.volume = 0.25;
+speaker.volume = 0.125;
+speaks.volume = 0.125;
 
 mute.addEventListener('click', () => {
     if (!mute.firstChild.hidden && mute.lastChild.hidden) {

@@ -118,22 +118,11 @@ h1{
 }
 button:hover{cursor:grab;}
 
-#q, .sound{
-    background-image: linear-gradient(var(--button-light),var(--button-dark));
-    border-radius: 1rem;
-    border-color: var(--border-c-1);
-    color: var(--border-c-2);
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-
 #q, .sound{position: absolute; top:1rem;}
 #q{right:1rem;}
 .sound{left:1rem;}
-#mute img{
-    width:2rem;
+#mute img, #q img{
+    width:4rem; 
 }
 
 #k{
@@ -155,7 +144,7 @@ button:hover{cursor:grab;}
     padding-top: 1rem;
 }
 
-#c_b button{
+#c_b button, #mute, #q{
     background-color: transparent;
     border:0;
 }
