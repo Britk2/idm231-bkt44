@@ -71,20 +71,22 @@ ul{
 
 .welcome{
     z-index: 10;
-    width:50%;
+    width:75ch;
     background-image: linear-gradient(var(--grey-grad-1),var(--grey-grad-2));
     border: solid 2px var(--border-c-1);
     border-radius: .5rem;
     padding: 2rem;
     margin: 1rem;
-
-    position: relative;
-    left:25%;
     
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-content: center;
+}
+
+#welcome{
+    display: block;
+    margin:0;
 }
 
 .welcome header{
@@ -279,7 +281,7 @@ h5{margin: .5rem;}
 }
 
 @media screen and (min-width: 87.5rem){
-    #c_b{grid-row-gap: 4rem; grid-column-gap: 5rem;}
+    #c_b{grid-row-gap: 3rem; grid-column-gap: 4rem;}
     #des{font-size: .75rem; line-height: 1.45;}
 }
 
