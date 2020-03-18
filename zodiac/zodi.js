@@ -11,8 +11,8 @@ const onS = document.getElementById('on');
 const offS = document.getElementById('off');
 const hov = document.getElementById('hover');
 
-speaker.volume = 0.125;
-speaks.volume = 0.125;
+speaker.volume = 0.25;
+speaks.volume = 0.25;
 
 mute.addEventListener('click', () => {
     if (!mute.firstChild.hidden && mute.lastChild.hidden) {
@@ -109,11 +109,14 @@ function p() {
     if (!mute.firstChild.hidden && des.hidden) {
         speaker.play();
     }
+    speaker.volume = 0.25;
+
 }
 function p2() {
     if (!mute.firstChild.hidden && !des.hidden) {
         speaks.play();
     }
+    speaks.volume = 0.25;
 }
 function sw() {
     if (des.hidden)
